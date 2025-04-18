@@ -7,6 +7,11 @@
 - main.cpp
 - makefile: using clang due to mac os 
 
+## Functionality:
+- Application has functionality to create a Linked List.
+- addEndNode allows user to add nodes to the End of the list.
+- addFrontNode allows user to add nodes to the Front of the list.
+- printList allows user to print the entireity of the list.
 
 ## ToDo list:
 
