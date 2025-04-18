@@ -1,5 +1,5 @@
-#ifndef LINKEDLIST.HPP
-#define LINKEDLIST.HPP
+#ifndef LINKEDLIST_HPP
+#define LINKEDLIST_HPP
 
 #include "Node.hpp"
 
