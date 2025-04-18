@@ -54,3 +54,16 @@ void LinkedList::printList(){
 
 
 }
+
+void LinkedList::addFrontNode(int value){
+    Node* newNode = new Node(value);
+    if(!head){
+        head = newNode;
+        return;
+    }else{
+        Node* temporary = head->next;
+        newNode->next = temporary->next;
+        head->next = newNode;
+    }
+
+}

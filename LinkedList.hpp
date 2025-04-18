@@ -11,7 +11,8 @@ public:
     LinkedList();
     ~LinkedList();
     void addEndNode(int value);
-    void printList();           
+    void printList();         
+    void addFrontNode(int value);
 };
 
 
