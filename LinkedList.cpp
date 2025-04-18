@@ -1,5 +1,6 @@
 #include <iostream>
 #include "LinkedList.hpp"
+using namespace std;
 
 
 // constructor
@@ -20,8 +21,36 @@ LinkedList:: ~LinkedList() {
 }
 
 // insert at the end
-
-
+void LinkedList::addEndNode(int value){
+    Node* newNode = new Node(value);
+    if (!head)
+    {
+        head = newNode;
+        return;
+    }else{
+        //loop through untill we reach the end
+        Node* temporary = head;
+        while(temporary->next){ // keep going until temporary points to null pointer, if yes stop 
+            temporary=temporary->next;
+        }
+        temporary->next= newNode; 
+    }
+    
+}
 
 
 // print linked list
+
+void LinkedList::printList(){
+    cout << "Linked List: "<< endl;
+    Node* current = head;
+
+    while (current){
+        Node* temporary = current;
+        current = current->next;
+        cout << "Node(Value: " << temporary->data << " ) -> ";
+    }
+    cout  << "NULL" << endl;
+
+
+}

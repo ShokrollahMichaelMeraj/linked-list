@@ -10,6 +10,8 @@ private:
 public:
     LinkedList();
     ~LinkedList();
+    void addEndNode(int value);
+    void printList();           
 };
 
 
