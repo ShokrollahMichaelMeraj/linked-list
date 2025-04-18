@@ -12,13 +12,6 @@ public:
     ~LinkedList();
 };
 
-LinkedList::LinkedList(/* args */)
-{
-}
-
-LinkedList::~LinkedList()
-{
-}
 
 
 #endif
