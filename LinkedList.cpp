@@ -67,3 +67,17 @@ void LinkedList::addFrontNode(int value){
     }
 
 }
+
+void LinkedList::searchAndSwitch(int oldValue, int newValue){ // search for all instances of old value and switches it with new value
+    Node* temporary = head;
+    while(temporary){
+        if(temporary->data==oldValue){
+            temporary->data = newValue;
+        }
+        temporary = temporary->next;
+    }
+}
+
+// void LinkedList::changeNodeValue(Node* target, int newValue){ // takes a given node, 
+
+// }
