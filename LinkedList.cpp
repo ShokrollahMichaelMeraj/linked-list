@@ -61,23 +61,92 @@ void LinkedList::addFrontNode(int value){
         head = newNode;
         return;
     }else{
-        Node* temporary = head->next;
-        newNode->next = temporary->next;
-        head->next = newNode;
+        newNode->next = head; 
+        head = newNode;
     }
 
 }
 
-void LinkedList::searchAndSwitch(int oldValue, int newValue){ // search for all instances of old value and switches it with new value
-    Node* temporary = head;
-    while(temporary){
-        if(temporary->data==oldValue){
-            temporary->data = newValue;
+int LinkedList::searchAndSwitch(int oldValue, int newValue){ // search for all instances of old value and switches it with new value
+    Node* current = head;
+    int identifier= 0;
+    while(current){
+        if(current->data==oldValue){
+            current->data = newValue;
+            identifier =1;
         }
-        temporary = temporary->next;
+        
+        current = current->next;
+        
     }
+    return identifier;
 }
 
-// void LinkedList::changeNodeValue(Node* target, int newValue){ // takes a given node, 
+void LinkedList::clear() {
+    while (head) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+    head = nullptr; // reset the pointer
+}
 
-// }
+
+
+int LinkedList::deleteFirstNodeWithValue(int value){
+    // delete the first node with the given value from parameters. 
+    // send 1 if value exists and is changed,
+    // send 0 if value does not exist after loopinhg through the list.
+    
+
+    // cases:
+    if (head == NULL) {
+        return 0; // Case 1: empty list
+    }
+
+    if(head!=NULL && head->data == value){
+        Node* temp = head;
+            head= head->next;
+            delete(temp);
+            return (1);
+    }
+    Node* previousNode = head;
+    Node* currentNode = head->next;
+        
+    while (currentNode!=NULL ){//  if the list is emptey.
+        
+        if (currentNode->data == value ) // if the value exists but is not the first node
+        {
+            previousNode->next = currentNode->next;
+            delete(currentNode);
+            return(1);
+            
+        }else
+        // iterate through the linked list, if the value does not exist, then we send an identifier 0. 
+        {
+            previousNode = previousNode->next;
+            currentNode = currentNode->next;
+        }
+        
+    }
+    return(0);//return 0 if the value does not exist within the list.
+
+}
+
+int LinkedList::changeFirsNodeWithValue(int oldValue, int newValue){
+    Node* current = head;
+    while(current){
+        if(current->data==oldValue){
+            current->data = newValue;
+            return 1;
+        }
+            current = current->next;
+        
+    
+    }
+    return 0;
+}
+
+    
+
+    

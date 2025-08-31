@@ -13,7 +13,10 @@ public:
     void addEndNode(int value);
     void printList();         
     void addFrontNode(int value);
-    void searchAndSwitch(int oldValue, int newValue);
+    int searchAndSwitch(int oldValue, int newValue);
+    void clear();
+    int deleteFirstNodeWithValue(int value);
+    int changeFirsNodeWithValue(int oldValue, int newValue);
 };
 
 

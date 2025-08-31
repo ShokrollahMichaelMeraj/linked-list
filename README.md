@@ -20,11 +20,20 @@
 - add search: 
     - should be able to search through the linked list to find the given node
     - if does not find it it will say it doenst exist
+    - inplement different sorting algos:
+        - Selection sort.
+        - Bubble sort.
+        - Insertion sort.
+        - Merge sort.
+        - Quick sort.
+        - Heap sort.
+        - Counting sort.
+        - map
 - delete given node
 
 - sort
 
-- add tail?
+- add tail
 
 - add back tracking?
 
