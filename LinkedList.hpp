@@ -8,15 +8,15 @@ class LinkedList
 private:
   Node* head;
 public:
-    LinkedList();
-    ~LinkedList();
-    void addEndNode(int value);
-    void printList();         
-    void addFrontNode(int value);
-    int searchAndSwitch(int oldValue, int newValue);
-    void clear();
-    int deleteFirstNodeWithValue(int value);
-    int changeFirsNodeWithValue(int oldValue, int newValue);
+    LinkedList(); // constructor
+    ~LinkedList(); // destructor
+    void addEndNode(int value); // adds a node with given value to the end of the list
+    void printList(); // iterates through and prints the valuesof each node in order  
+    void addFrontNode(int value); // adds a node with given value to the front of the node
+    int searchAndSwitch(int oldValue, int newValue); // changes all occurences of oldvalue to the new value
+    void clear(); // clears out the entire list.
+    int deleteFirstNodeWithValue(int value); // deletes the node with first occurence of the given value
+    int changeFirsNodeWithValue(int oldValue, int newValue); // changes the first occurence of the old value node with newValue.
 };
 
 
