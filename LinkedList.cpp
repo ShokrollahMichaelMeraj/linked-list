@@ -133,7 +133,7 @@ int LinkedList::deleteFirstNodeWithValue(int value){
 
 }
 
-int LinkedList::changeFirsNodeWithValue(int oldValue, int newValue){
+int LinkedList::changeFirstNodeWithValue(int oldValue, int newValue){
     Node* current = head;
     while(current){
         if(current->data==oldValue){
@@ -145,6 +145,51 @@ int LinkedList::changeFirsNodeWithValue(int oldValue, int newValue){
     
     }
     return 0;
+}
+
+
+int LinkedList::deleteIndex(int index){
+    //deletes node at given index passed through parameters
+    //check if the index is less than 0 or if the list is empty, if so return 0.
+    // check if index is 0, 
+    // the other cases are all the same. .
+    // if the index is the same as when we iterate through the function, connect previous node to the node after the given index.
+
+    if (head ==  NULL || index < 0){
+        return 0;
+    }
+    
+    else if(index == 0){
+        Node * temp = head;
+        head = head->next;
+        delete(temp);
+        return 1;
+    }
+    else{
+        int count = 1;
+        Node * previousNode = head;
+        Node * currentNode = head -> next;
+
+        while(currentNode ){
+            if (count == index){
+                previousNode->next = currentNode->next;
+                delete(currentNode);
+                return 1;
+            }else{
+                previousNode = currentNode;
+                currentNode = currentNode ->next;
+                count++;
+
+            }
+        }
+
+        return 0;
+
+    }
+    
+
+    
+    
 }
 
     

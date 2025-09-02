@@ -16,7 +16,8 @@ public:
     int searchAndSwitch(int oldValue, int newValue); // changes all occurences of oldvalue to the new value
     void clear(); // clears out the entire list.
     int deleteFirstNodeWithValue(int value); // deletes the node with first occurence of the given value
-    int changeFirsNodeWithValue(int oldValue, int newValue); // changes the first occurence of the old value node with newValue.
+    int changeFirstNodeWithValue(int oldValue, int newValue); // changes the first occurence of the old value node with newValue.
+    int deleteIndex(int index); // deletes node at specific index. 
 };
 
 
