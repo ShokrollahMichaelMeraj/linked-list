@@ -23,14 +23,14 @@ A simple, ongoing, educational **singly linked list** implementation in C++ with
 
 ## Project Structure
 
-.
-├── LinkedList.hpp 
-├── LinkedList.cpp
-├── node.hpp 
-├── main.cpp # demo/driver
-├── TestLinkedList.cpp # assertions-based tests
-├── Makefile 
-└── README.md
+`├── LinkedList.hpp 
+`├── LinkedList.cpp
+`├── node.hpp 
+`├── main.cpp # demo/driver
+`├── TestLinkedList.cpp # assertions-based tests
+`├── Makefile 
+`└── README.md
+
 
 ## How Ro Run:
 
