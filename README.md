@@ -1,41 +1,55 @@
-# linked-list
+# LinkedList (C++)
 
-- linked listset up in c++
-- Node.hpp
-- LinkedList.hpp
-- LinkedList.cpp
-- main.cpp
-- makefile: using clang due to mac os 
+A simple, ongoing, educational **singly linked list** implementation in C++ with basic operations, a small demo (`main.cpp`), and assertion-based tests (`TestLinkedList.cpp`).
 
-## Functionality:
-- Application has functionality to create a Linked List.
-- addEndNode allows user to add nodes to the End of the list.
-- addFrontNode allows user to add nodes to the Front of the list.
-- printList allows user to print the entireity of the list.
+---
 
-## ToDo list:
+## Features
+
+- Construct / destroy list (proper node cleanup)
+- List Head access through the headAccess function
+- Insert at **front** and **end**
+- Find Length of Linked List.
+- Print list: Loops through nodes and prints given linked list.
+- **Search & replace**:
+  - `searchAndSwitch(oldValue, newValue)` → replaces **all** occurrences of oldValue with newValue.
+  - `changeFirsNodeWithValue(oldValue, newValue)` → replaces **first** occurrence (note: function name intentionally matches current code)
+- **Delete**:
+  - `deleteFirstNodeWithValue(value)` → delete first matching node
+  - `deleteIndex(index)` → delete node at 0-based index
+- `clear()` → remove all nodes
+
+---
+
+## Project Structure
+
+.
+├── LinkedList.hpp 
+├── LinkedList.cpp
+├── node.hpp 
+├── main.cpp # demo/driver
+├── TestLinkedList.cpp # assertions-based tests
+├── Makefile 
+└── README.md
+
+## How Ro Run:
+
+- 
+
+## Ongoing Development List:
 
 - add menu:
     - should be abel to run commands from the terminal, such as create or destroy the linked list, add node, and print
 - add search: 
-    - should be able to search through the linked list to find the given node
     - if does not find it it will say it doenst exist
-    - inplement different sorting algos:
-        - Selection sort.
-        - Bubble sort.
-        - Insertion sort.
-        - Merge sort.
-        - Quick sort.
-        - Heap sort.
-        - Counting sort.
-        - map
-- delete given node
 
-- sort
+- add sort:
+    - inplement Merge sort.
+- add data structues using existing architecture:
+  - Stack and queue implementation. 
+- Other:
+  - turn list into array. 
 
-- add tail
-
-- add back tracking?
 
 
 

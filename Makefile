@@ -1,24 +1,40 @@
 #compiler 
-CXX = clang++
-CXXFLAGS = -std=c++11 -Wall
+CXX := clang++
+CXXFLAGS := -std=c++11 -Wall -Wextra  -pedantic -g 
 
 #executable
 
-TARGET = linkedlist
+TARGETS := main test
 
 # source files
-SRCS = main.cpp LinkedList.cpp
+MAIN_SRCS := main.cpp LinkedList.cpp
+TEST_SRCS := TestLinkedList.cpp LinkedList.cpp
 
 # Object files 
-OBJS = $(SRCS:.cpp=.o)
+MAIN_OBJS := $(MAIN_SRCS:.cpp=.o)
 
-# Default rule
-all: $(TARGET)
 
-# Link object files into final executable
-$(TARGET): $(SRCS)
-	$(CXX) $(CXXFLAGS) $(SRCS) -o $(TARGET)
+TEST_OBJS := $(TEST_SRCS:.cpp=.o)
+	
 
-# Clean up compiled files
+
+# Default target
+all: $(TARGETS)
+
+# Build main
+main: $(MAIN_OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+# Build test
+test: $(TEST_OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+# Compile rule: .cpp -> .o
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Clean up
 clean:
-	rm -f $(TARGET) *.o
+	rm -f $(TARGETS) $(MAIN_OBJS) $(TEST_OBJS)
+
+.PHONY: all clean

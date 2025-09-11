@@ -8,10 +8,15 @@ int main(){
 
     // Test 1: delete from empty list
     assert(list.deleteFirstNodeWithValue(10) == 0);
+
+    assert(list.findLength(list.headAccess())==0); //  return length = 0 on empty list.
+
     
     list.addEndNode(1);
     list.addEndNode(2);
     list.addEndNode(3); //creates list head -> 1 -> 2 -> 3 -> NULL
+
+    assert(list.findLength(list.headAccess())== 3); // return length equals to 3, since there are 3 nodes.
 
     // Test 2: changing node with given value which exists
 
@@ -70,6 +75,8 @@ int main(){
 
     list.addEndNode(5); //should be  head -> 0 ->1 -> 2 -> 3 -> 4 -> 5 -> NULL
 
+   
+
 
     assert(list.deleteIndex(-1)==0); // check to see if returns 0 if given index is smaller then 0
 
@@ -79,14 +86,17 @@ int main(){
 
     assert(list.deleteIndex(0)==1); // pass and return 1 if deleting the first node works
 
-    assert(list.deleteIndex(1)==1); // pass and return 1 if dleeting middle node works. 
+    assert(list.deleteIndex(1)==1); // pass and return 1 if dleeting middle node works.
+    
+    
 
 
 
 
 
 
-    std::cout << "All test are successful";
+
+    std::cout << "All test are successful"<<"/n";
 
 
     return 0;

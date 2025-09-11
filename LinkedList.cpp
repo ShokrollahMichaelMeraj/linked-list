@@ -19,6 +19,10 @@ LinkedList:: ~LinkedList() {
     }
 
 }
+Node * LinkedList::headAccess(){ // gives temporary pointer to head
+    Node * tempHead = head;
+    return tempHead;
+}
 
 // insert at the end
 void LinkedList::addEndNode(int value){
@@ -82,7 +86,7 @@ int LinkedList::searchAndSwitch(int oldValue, int newValue){ // search for all i
     return identifier;
 }
 
-void LinkedList::clear() {
+void LinkedList::clear() { // cleans the linkedlist
     while (head) {
         Node* temp = head;
         head = head->next;
@@ -191,6 +195,27 @@ int LinkedList::deleteIndex(int index){
     
     
 }
+
+
+
+int LinkedList::findLength(Node * head){
+    int length = 0;
+    Node * temporary_Head_Pointer = head;
+
+    while (temporary_Head_Pointer != NULL)
+    {
+        length++;
+        temporary_Head_Pointer = temporary_Head_Pointer-> next;
+        
+    }
+
+    return length; // if head points to NULL there ar eno elements in the list, , does not enter whule , returning 0,
+                    // if there is at least one node, (head does not point t0 null) enters while loop, 
+                    // increments length by the number of elements and returns length after exiting the loop.
+
+    
+}
+    
 
     
 
