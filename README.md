@@ -1,8 +1,11 @@
 # LinkedList (C++)
 
-A simple, ongoing, educational **singly linked list** implementation in C++ with basic operations, a small demo (`main.cpp`), and assertion-based tests (`TestLinkedList.cpp`).
+A clean, efficient C++ implementation of a singly linked list with comprehensive functionality, suitable for educational purposes and integration into larger projects.
 
 ---
+## Overview
+
+This project provides a robust  **singly linked list** implementation in C++ with a focus on memory safety, proper resource management, and comprehensive functionality. It serves as both a learning resource and a reusable data structure component.
 
 ## Features
 
@@ -24,33 +27,55 @@ A simple, ongoing, educational **singly linked list** implementation in C++ with
 ## Project Structure
 
 ```
-├── LinkedList.hpp 
-├── LinkedList.cpp
-├── node.hpp 
-├── main.cpp # demo/driver
-├── TestLinkedList.cpp # assertions-based tests
-├── Makefile 
-└── README.md
+├── LinkedList.hpp          # LinkedList class declaration
+├── LinkedList.cpp          # LinkedList method implementations
+├── node.hpp                # Node structure definition
+├── main.cpp                # Demonstration program
+├── TestLinkedList.cpp      # Comprehensive test suite
+├── Makefile                # Build configuration
+└── README.md               # Project documentation
 ```
+## Tech Stack
+
+- Language: C++17
+- uild System: Make
+- Testing: Custom assertion-based testing framework
+- Memory Management: Manual memory management with RAII principles-
+
+## Getting Started
+
+- Coming Soon!
+
+# Roadmap & Ongoing Development
+
+# Planned Features
+
+- Interactive Menu: Terminal-based interface for ease user interaction.
+- Enhanced Search: Improved search with better feedback
+- Sorting Algorithm: Implementation of merge sort for linked lists
+- Additional Data Structures: Stack and queue implementations using the existing architecture
+- Conversion Utilities: Function to convert linked list to array
+
+# Current Development Focus
+
+- Improving error handling and edge case management
+- Adding more comprehensive documentation
+- Performance optimization for large lists
+
+# Contributing
+- Coming Soon !
+
+# License
+
+- This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Contact
+
+- Shokrollah Michael Meraj - mmeraj@sfu.ca
+
+- Project Link: https://github.com/ShokrollahMichaelMeraj/linked-list
 
 
-## How Ro Run:
-
-- 
-
-## Ongoing Development List:
-
-- add menu:
-    - should be abel to run commands from the terminal, such as create or destroy the linked list, add node, and print
-- add search: 
-    - if does not find it it will say it doenst exist
-
-- add sort:
-    - inplement Merge sort.
-- add data structues using existing architecture:
-  - Stack and queue implementation. 
-- Other:
-  - turn list into array. 
 
 
 
