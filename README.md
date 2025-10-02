@@ -22,6 +22,7 @@ This project provides a robust  **singly linked list** implementation in C++ wit
   - `deleteIndex(index)` → delete node at 0-based index
 - `clear()` → remove all nodes
 
+
 ---
 
 ## Project Structure
@@ -44,7 +45,30 @@ This project provides a robust  **singly linked list** implementation in C++ wit
 
 ## Getting Started
 
-- Coming Soon!
+### Prerequisites
+- A C++ compiler: **clang++** or **g++**
+- **make**
+- (macOS) Install Xcode Command Line Tools: `xcode-select --install`
+- (Ubuntu/Debian) `sudo apt-get install build-essential`
+- (Windows) Use **WSL** (recommended) or MinGW
+- 
+---
+
+### 1) Clone the repository
+```bash
+# HTTPS
+git https://github.com/ShokrollahMichaelMeraj/linked-list
+cd <YOUR_REPO>
+
+# Or SSH (if you’ve set up keys)
+# git https://github.com/ShokrollahMichaelMeraj/linked-list
+# cd <YOUR_REPO>
+```
+### 2) Run
+
+
+
+
 
 # Roadmap & Ongoing Development
 

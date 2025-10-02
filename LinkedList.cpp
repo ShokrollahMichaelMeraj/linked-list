@@ -86,13 +86,15 @@ int LinkedList::searchAndSwitch(int oldValue, int newValue){ // search for all i
     return identifier;
 }
 
-void LinkedList::clear() { // cleans the linkedlist
+int LinkedList::clear() { // cleans the linkedlist
+    
     while (head) {
         Node* temp = head;
         head = head->next;
         delete temp;
     }
     head = nullptr; // reset the pointer
+    return 1;
 }
 
 
@@ -216,6 +218,50 @@ int LinkedList::findLength(Node * head){
     
 }
     
+
+int * LinkedList::convertToArray(Node * head){
+     // input is the head of the list, get side of the list using the findlength function, 
+     // create array of size size, go through the list and input the   , create emptey array. of size size. 
+     // while the list is not pointing to NULL go through using the next variable of the node, 
+     // and increment the array by 1 inputting node data into every index. 
+
+    if (head == NULL){return NULL;}
+
+    Node * tempHead = head;
+    int listSize = findLength(tempHead);
+    int * arraylist = new int[listSize];
+    int index = 0;
+    while (tempHead && index < listSize ){
+        arraylist[index] = tempHead->data;
+        index ++;
+        tempHead= tempHead->next;
+    }
+    return arraylist;
+
+}
+
+
+void LinkedList::printArrayList(int * array, int size){
+    // take array and size of awrray through parameter, loop through array and print each index less than size.
+
+    if (size >= 0 && array != NULL ){
+        cout<< "array[ ";
+        for (int index= 0; index < size; index++ ){
+            if (index == size-1 ){
+                cout << array[index] << " ]" << "\n";
+            }else{
+                cout << array[index] << ", ";
+            }
+
+        }
+        
+    }
+    else{
+        cout << "Invalid input, please provide valid inputs." << "\n" ;
+    }
+    
+
+}
 
     
 

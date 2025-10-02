@@ -11,7 +11,8 @@ int main(){
 
     assert(list.findLength(list.headAccess())==0); //  return length = 0 on empty list.
 
-    
+   
+
     list.addEndNode(1);
     list.addEndNode(2);
     list.addEndNode(3); //creates list head -> 1 -> 2 -> 3 -> NULL
@@ -87,8 +88,23 @@ int main(){
     assert(list.deleteIndex(0)==1); // pass and return 1 if deleting the first node works
 
     assert(list.deleteIndex(1)==1); // pass and return 1 if dleeting middle node works.
+
+    assert(list.clear()==1); // clear out list, and return 1
+
+
+    list.addEndNode(1);
+    list.addEndNode(2);
+    list.addEndNode(3); // list should be back to 1 ->. 2 -> 3 -> NULL
+
+
+
     
+
+
+
     
+    int* convertToArray(Node * head); //   converts list into array. 
+    void printArrayList(int * array, int size); // prints array.
 
 
 

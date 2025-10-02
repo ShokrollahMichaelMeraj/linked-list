@@ -11,6 +11,8 @@ int main() {
     srand(time(0));
     LinkedList list;
 
+    cout << "length is: " << list.findLength(list.headAccess()) << "\n";
+
     int output = list.deleteIndex(0);
     std::cout << output<<"\n";
 
@@ -18,81 +20,103 @@ int main() {
     list.printList();
 
     
+    
+
+    
 
     for(int index = 0; index <= 10; index++ ){
+        
         list.addEndNode(index);
+        cout << "length is: " << list.findLength(list.headAccess()) << "\n";
+
 
     }
 
 
     list.printList();
 
-    int length =list.findLength(list.headAccess());
-    cout<< "length of given list is: "<< length<<"\n";
+    cout << "length is: " << list.findLength(list.headAccess()) << "\n";
 
 
-    list.deleteIndex(10);
-
-    list.printList();
-
-    list.deleteIndex(0);
+    int* array = list.convertToArray(list.headAccess());
+    int size = list.findLength(list.headAccess());
+    list.printArrayList(array, size);
 
 
+    int * emptyarray;
+    list.printArrayList(emptyarray,0);
 
-    list.printList();
 
-    list.deleteIndex(5);
 
-    list.printList();
+    
 
 
 
 
-    list.deleteFirstNodeWithValue(5);
+    // int length =list.findLength(list.headAccess());
+    // cout<< "length of given list is: "<< length<<"\n";
 
-    list.printList();
 
-    list.deleteFirstNodeWithValue(0);
+    // list.deleteIndex(10);
 
-    list.printList();
+    // list.printList();
 
-    list.deleteFirstNodeWithValue(10);
+    // list.deleteIndex(0);
 
-    list.printList();
 
-    list.clear();
 
-    LinkedList alist;
+    // list.printList();
 
-    for(int index = 0; index <= 10 ; index++){
+    // list.deleteIndex(5);
+
+    // list.printList();
+
+
+
+
+    // list.deleteFirstNodeWithValue(5);
+
+    // list.printList();
+
+    // list.deleteFirstNodeWithValue(0);
+
+    // list.printList();
+
+    // list.deleteFirstNodeWithValue(10);
+
+    // list.printList();
+
+    // list.clear();
+
+    // LinkedList alist;
+
+    // for(int index = 0; index <= 10 ; index++){
    
 
-            alist.addEndNode(index);
+    //         alist.addEndNode(index);
            
 
       
-            alist.addEndNode(index);
+    //         alist.addEndNode(index);
     
 
-    }
+    // }
 
-    alist.printList();
+    // alist.printList();
 
-    alist.deleteFirstNodeWithValue(0);
+    // alist.deleteFirstNodeWithValue(0);
 
-    alist.printList();
+    // alist.printList();
 
-    alist.deleteFirstNodeWithValue(5);
+    // alist.deleteFirstNodeWithValue(5);
 
-    alist.printList();
+    // alist.printList();
 
-    alist.deleteFirstNodeWithValue(10);
+    // alist.deleteFirstNodeWithValue(10);
 
-    alist.printList();
+    // alist.printList();
 
-    alist.clear();
-
-
+    // alist.clear();
 
 
 
@@ -100,42 +124,44 @@ int main() {
 
 
 
-    list.addEndNode(2);
-    list.addEndNode(6);
-    list.printList();
 
-    list.addFrontNode(26);
-    list.printList();
 
-    list.clear();
+    // list.addEndNode(2);
+    // list.addEndNode(6);
+    // list.printList();
 
-    list.printList();
+    // list.addFrontNode(26);
+    // list.printList();
 
-    for(int index = 0; index < rand() % 100; index++ ){
-        if(index == 5){
-            list.addEndNode(126);
-        }else{
-            list.addEndNode(rand() % 100);
-        }
+    // list.clear();
+
+    // list.printList();
+
+    // for(int index = 0; index < rand() % 100; index++ ){
+    //     if(index == 5){
+    //         list.addEndNode(126);
+    //     }else{
+    //         list.addEndNode(rand() % 100);
+    //     }
         
         
-    }
-    list.printList();
+    // }
+    // list.printList();
 
-    list.addFrontNode(26);
+    // list.addFrontNode(26);
 
-    list.printList();
+    // list.printList();
 
-    list.searchAndSwitch(26,1260);
+    // list.searchAndSwitch(26,1260);
 
-    list.printList();
+    // list.printList();
 
-    list.searchAndSwitch(126,26000000);
+    // list.searchAndSwitch(126,26000000);
 
 
-    list.searchAndSwitch(26,1260);
+    // list.searchAndSwitch(26,1260);
     
-    list.printList();
+    // list.printList();
 
     list.clear();
 
