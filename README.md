@@ -66,6 +66,12 @@ cd <YOUR_REPO>
 ```
 ### 2) Run
 
+```bash
+$make # Will run make file
+$./app # Run App object file where the menu is located 
+```
+- Next step? HAVE FUN!
+
 
 
 
