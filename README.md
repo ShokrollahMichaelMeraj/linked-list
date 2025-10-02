@@ -57,18 +57,15 @@ This project provides a robust  **singly linked list** implementation in C++ wit
 ### 1) Clone the repository
 ```bash
 # HTTPS
-git https://github.com/ShokrollahMichaelMeraj/linked-list
-cd <YOUR_REPO>
+$ git https://github.com/ShokrollahMichaelMeraj/linked-list # clone repo into desired folder
+$ cd <YOUR_REPO> # Enter folder
 
-# Or SSH (if you’ve set up keys)
-# git https://github.com/ShokrollahMichaelMeraj/linked-list
-# cd <YOUR_REPO>
 ```
 ### 2) Run
 
 ```bash
-$make # Will run make file
-$./app # Run App object file where the menu is located 
+$ make # Will run make file
+$ ./app # Run App object file where the menu is located 
 ```
 - Next step? HAVE FUN!
 
