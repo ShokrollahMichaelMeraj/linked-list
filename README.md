@@ -80,7 +80,6 @@ $./app # Run App object file where the menu is located
 
 # Planned Features
 
-- Interactive Menu: Terminal-based interface for ease user interaction.
 - Enhanced Search: Improved search with better feedback
 - Sorting Algorithm: Implementation of merge sort for linked lists
 - Additional Data Structures: Stack and queue implementations using the existing architecture
