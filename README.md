@@ -39,7 +39,7 @@ This project provides a robust  **singly linked list** implementation in C++ wit
 ## Tech Stack
 
 - Language: C++17
-- uild System: Make
+- Build System: Make
 - Testing: Custom assertion-based testing framework
 - Memory Management: Manual memory management with RAII principles-
 
